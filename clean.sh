@@ -12,4 +12,4 @@ curl \
   -X DELETE \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $INPUT_GH_TOKEN" \
-  "https://api.github.com/repos/${{ github.repository }}/actions/caches?key=$INPUT_KEY"
+  "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/caches?key=$INPUT_KEY"
