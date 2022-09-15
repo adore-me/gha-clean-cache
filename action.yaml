@@ -10,7 +10,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: 'Clean Cache's
+    - name: 'Clean Cache'
       run: $GITHUB_ACTION_PATH/clean.sh
       shell: bash
       env:
