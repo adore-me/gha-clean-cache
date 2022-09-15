@@ -1,0 +1,18 @@
+name: 'AdoreMe Tech Cleanup Cache Action'
+description: 'Clean GHA cache based on a given key'
+inputs:
+  key:
+    description: 'Key to delete from cache'
+    required: true
+  gh-token:
+    description: 'GitHub token'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Clean Cache's
+      run: $GITHUB_ACTION_PATH/clean.sh
+      shell: bash
+      env:
+        INPUT_KEY: ${{ inputs.key }}
+        INPUT_GH_TOKEN: ${{ inputs.gh-token }}
